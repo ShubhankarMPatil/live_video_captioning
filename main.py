@@ -2,11 +2,14 @@ import cv2
 import time
 import numpy as np
 from caption_generator import CaptionGenerator
-from config import CAPTURE_INTERVAL
+from config import device, CAPTURE_INTERVAL
 
 def main():
     # Initialize the caption generator
     caption_generator = CaptionGenerator()
+
+    #Print the devide to make sure CUDA is being used
+    print(device)
 
     # Open a connection to the camera (0 for the default camera)
     cap = cv2.VideoCapture(0)
