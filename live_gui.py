@@ -12,7 +12,8 @@ def main():
     caption_generator = CaptionGenerator()
 
     # Open a connection to the camera (0 for the default camera)
-    cap = cv2.VideoCapture("sample_videos/videoplayback.mp4")
+    # cap = cv2.VideoCapture("sample_videos/videoplayback.mp4")
+    cap = cv2.VideoCapture(0)
     if not cap.isOpened():
         print("Error: Could not open video.")
         return
